@@ -137,7 +137,7 @@ def imprime_mensagem_perdedor(palavra_secreta):
     print("       \_______/           ")
 
 
-def carrega_palavra_secreta(primeira_linha_valida=0,nome_arquivo="palavras.txt"):
+def carrega_palavra_secreta(primeira_linha_valida=0, nome_arquivo="palavras.txt"):
     arquivo = open(nome_arquivo, "r")
     palavras = []
     for linha in arquivo:

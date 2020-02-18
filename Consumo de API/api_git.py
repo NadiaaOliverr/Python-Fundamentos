@@ -1,8 +1,15 @@
-import requests, json
+# import requests
+# import json
 
-response = requests.get("https://api.github.com/users/nadiaaoliverr")
-json_response = response.json()
+# # input('Digite o número do usuario: ')
 
-formatted_response = json.dumps(json_response, indent=2,ensure_ascii=False)
+# response = requests.get("https://api.github.com/users/mgabriela5847/repos")
+# print(response.status_code)
+# json_response = response.json()
 
-print(formatted_response))
+# for i in range(len(json_response)):
+#     print(json_response[i]['name'])
+
+# # formatted_response = json.dumps(json_response, indent=2, ensure_ascii=False)
+
+# # print(formatted_response)
