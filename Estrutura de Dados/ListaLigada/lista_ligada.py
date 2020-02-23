@@ -43,7 +43,7 @@ class ListaLigada:
         return atual
 
     def _validar_posicao(self, posicao):
-        if posicao <= 0  < self._quantidade:
+        if 0 <= posicao  < self._quantidade:
             return True
         else:
             raise IndexError("Posição inválida {}". format(posicao))
@@ -54,6 +54,22 @@ class ListaLigada:
         removido.proximo = None
         self._quantidade -= 1
         return removido.conteudo
+
+    def remover_em_qualquer_posicao(self, posicao):
+        if posicao == 0:
+            return self.remover_inicio()
+        else:
+            esquerda = self._celula(posicao - 1)
+            removido = esquerda.proximo
+            esquerda.proximo = removido.proximo
+            removido.proximo = None
+            self._quantidade -= 1
+            return removido.conteudo
+
+    def item(self, posicao): #retorna o item
+        self._validar_posicao(posicao)
+        celula = self._celula(posicao)
+        return celula.conteudo
 
     def imprimir(self):
         atual = self.inicio

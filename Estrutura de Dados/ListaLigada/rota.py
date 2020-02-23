@@ -24,17 +24,34 @@ def main():
     lista.inserir_no_inicio(loja2)
     lista.inserir_no_inicio(loja3)
     lista.inserir_no_inicio(loja4)
-
     lista.inserir_em_qualquer_posicao(1,loja2)
-    lista.imprimir()
 
-    removido = lista.remover_inicio()
-    print("Removido: {}".format(removido))
-    removido = lista.remover_inicio()
-    print("Removido: {}".format(removido))
+    print("======== Inserções ========\n")
+    lista.imprimir()
+    print("\nQuantidade de itens: ", end="")
     print(lista.quantidade)
 
-    lista.imprimir()
+    print("\n\n======== Remoções no início ========\n")
+    removido = lista.remover_inicio()
+    print("Removido: {}".format(removido))
+    removido = lista.remover_inicio()
+    print("Removido: {}".format(removido))
+    print("\nQuantidade de itens: ", end="")
+    print(lista.quantidade)
 
+    print("\n\n======== Remoções em qualquer posição ========\n")
+
+    removido = lista.remover_em_qualquer_posicao(2)
+    print("Removido da posicao 2: {}".format(removido))
+    removido = lista.remover_em_qualquer_posicao(0)
+    print("Removido da posicao 0: {}".format(removido))
+
+    print("\n\n======== Lista Resultante ========\n")
+    lista.imprimir()
+    print("\nQuantidade de itens: ", end="")
+    print(lista.quantidade)
+
+    print("\n\n========Printando na posição específica ========\n")
+    print(lista.item(0))
 
 main()
